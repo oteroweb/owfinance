@@ -64,3 +64,62 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+
+Tabla "transactions"
+
+id (clave primaria)
+category
+description
+date
+total_amount
+is_income (booleano, opcional)
+account_id (clave foránea hacia "accounts", opcional)
+is_multiple_payment (booleano, opcional)
+provider_id (clave foránea hacia "providers", opcional)
+Tabla "accounts"
+
+id (clave primaria)
+account_name
+Tabla "payments"
+
+id (clave primaria)
+transaction_id (clave foránea hacia "transactions")
+account_id (clave foránea hacia "accounts")
+amount
+Tabla "providers"
+
+id (clave primaria)
+provider_name
+Tabla "items"
+
+id (clave primaria)
+transaction_id (clave foránea hacia "transactions")
+quantity
+unit_price
+article_category
+article_description
+unit_type
+total
+budget_id (clave foránea hacia "budgets", opcional)
+Tabla "budgets"
+
+id (clave primaria)
+name
+type (tipo de presupuesto: "fixed" o "income_based")
+fixed_amount (monto fijo del presupuesto, opcional)
+category_id (clave foránea hacia "budget_category")
+Tabla "budget_category"
+
+id (clave primaria)
+name
+depth
+Con esta estructura de base de datos, puedes manejar la información de tus transacciones, cuentas asociadas, pagos, proveedores, ítems de factura y presupuestos, incluyendo la opción de tener presupuestos fijos o basados en ingresos.
+
+Recuerda que esta estructura es una guía general y puedes personalizarla según tus necesidades específicas. Además, debes definir las relaciones y las restricciones de clave foránea en tus modelos de Laravel para reflejar adecuadamente la estructura en la base de datos.
+
+
+
+
+
+
