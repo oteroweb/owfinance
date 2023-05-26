@@ -12,9 +12,18 @@
   "dependencies": {
     "@emotion/react": "^11.11.0",
     "@emotion/styled": "^11.11.0",
+    "@mui/icons-material": "^5.11.16",
     "@mui/material": "^5.13.2",
+    "formik": "^2.2.9",
+    "framer-motion": "^10.12.16",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-copy-to-clipboard": "^5.1.0",
+    "react-dom": "^18.2.0",
+    "react-element-to-jsx-string": "^15.0.0",
+    "react-router-dom": "^6.11.2",
+    "react-syntax-highlighter": "^15.5.0",
+    "recharts": "^2.6.2",
+    "yup": "^1.2.0"
   },
   "devDependencies": {
     "@types/react": "^18.0.28",
